@@ -1,3 +1,25 @@
+@font-face {
+  font-family: Yeseva One;
+  src: url(/assets/fonts/Yeseva_One/YesevaOne-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: Proxima Nova;
+  src: url(/assets/fonts/proxima_ssv/proxima_ssv/ProximaNova-Regular.otf)
+    format("opentype");
+}
+@font-face {
+  font-family: FuturaBookC;
+  src: url(/assets/fonts/futurabookc.otf) format("opentype");
+}
+@font-face {
+  font-family: FuturaDemiC;
+  src: url(/assets/fonts/futurademic.otf) format("opentype");
+}
+@font-face {
+  font-family: FuturaMediumC;
+  src: url(/assets/fonts/futuramediumc.otf) format("opentype");
+}
+
 @media (max-width: 500px) {
   nav,
   .preview__instagram,
@@ -362,7 +384,8 @@ body {
     position: absolute;
     width: 55px;
     height: 55px;
-    background: #e3b873;
+    background: #e3b873 url(/assets/arrow-next.svg) no-repeat;
+    background-position: center;
     box-shadow: 0px 0px 15px rgba(227, 184, 115, 0.5);
     border-radius: 50%;
     border: none;
@@ -416,17 +439,17 @@ body {
   }
   &__text {
     margin: 0 auto;
-    margin-top: 35px;
-    width: 680px;
-    height: 130px;
+    margin-top: 25px;
     text-align: center;
     font-family: FuturaBookC;
     font-size: 20px;
     line-height: 34px;
     text-align: center;
+    padding: 0 450px;
 
     color: #363636;
     padding-bottom: 39px;
+
     &_white {
       line-height: 27px;
       color: #ffffff;
@@ -671,7 +694,10 @@ body {
   }
 
   .request-form {
-    background: #131313;
+    background: url(/assets/question-bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #131313;
     width: 510px;
     margin-right: 100px;
 
@@ -930,4 +956,211 @@ body {
   &__image {
     margin-top: 50px;
   }
+}
+.clients {
+  .cols__item {
+    background: #ffffff;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04);
+  }
+  &__info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-right: 79px;
+  }
+  &__photo {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    padding: 24px 23px 22px 20px;
+  }
+  &__name {
+    font-family: Yeseva One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+
+    color: #181818;
+  }
+  &__review {
+    padding-left: 20px;
+    padding-right: 30px;
+    font-family: FuturaBookC;
+    font-size: 15px;
+    line-height: 180%;
+    /* or 27px */
+
+    color: #959595;
+  }
+  &__values {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 82px;
+    font-family: Yeseva One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 24px;
+    text-transform: uppercase;
+
+    color: #ffffff;
+    margin-top: 60px;
+    img {
+      margin: 15px;
+    }
+  }
+  &__value-square {
+    display: flex;
+    align-items: center;
+    background: #e3b873;
+    box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5);
+    border-right: 1px solid #ffffff;
+    flex: 1;
+  }
+  &__value-time {
+    display: flex;
+    align-items: center;
+    background: #e3b873;
+    box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5);
+    flex: 1;
+  }
+}
+
+.bottom-bg {
+  background: url(/assets/bottom-bg.png) #000;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 65px;
+}
+
+.question {
+  background: url(/assets/question-bg.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #181818;
+  margin: 0 250px;
+  padding: 35px 150px;
+  text-align: center;
+  position: relative;
+  top: -100px;
+  margin-bottom: -100px;
+
+  &__title {
+    font-family: Yeseva One;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    text-align: left;
+    flex: 1;
+    margin: 50px 30px 0;
+
+    &_checkbox {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+  }
+
+  input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    &::placeholder {
+      font-family: FuturaMediumC;
+      font-size: 18px;
+      line-height: 25px;
+      color: #ffffff;
+    }
+  }
+
+  label {
+    display: block;
+    font-family: FuturaBookC;
+    font-size: 15px;
+    line-height: 20px;
+
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .form__checkbox {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: #e3b873 url(/assets/check.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 1px;
+  }
+
+  button {
+    border: none;
+    padding: 20px 50px;
+
+    background: #e3b873;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.15);
+    font-family: FuturaDemiC;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #ffffff;
+  }
+}
+
+.social {
+  margin: 50px 420px;
+
+  &__phone {
+    font-family: Yeseva One;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #e3b873;
+  }
+
+  &__icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  &__icon {
+    background-color: #e3b873;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    margin: 0 7px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.map {
+  width: 60%;
+  padding-top: 30%;
+  background: url(/assets/map.png);
+  background-size: cover;
+  margin: 0 auto;
+}
+
+.footer {
+  height: 130px;
 }
