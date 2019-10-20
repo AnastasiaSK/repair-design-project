@@ -73,13 +73,24 @@
           <div class="slider">
             <div class="slider-description">
               <div class="slider-description__title">
-                Completed<br />projects &nbsp;&nbsp;&nbsp;&nbsp;
-                &mdash;&mdash;&mdash;&mdash;
+                Completed<br />projects
+                <span class="slider-description__title-line"
+                  >&nbsp;&nbsp;&nbsp;&nbsp; &mdash;&mdash;&mdash;&mdash;</span
+                >
               </div>
               <div class="slider-description__text">
                 Only a small part of the work performed by our company is
                 presented on the site. For 14 years on in the construction
                 market we have made happy more than 1000 families
+              </div>
+              <div class="slider__images slider__images_mobile">
+                <button class="slider__prev-image"></button>
+                <div>
+                  <img src="/assets/Rostov-on-Don,_Admiral.jpg" alt="" />
+                </div>
+                <div><img src="/assets/Sochi_Thieves.jpg" alt="" /></div>
+                <div><img src="" alt="" /></div>
+                <button class="slider__next-image"></button>
               </div>
               <div>
                 <table class="slider-description__table">
@@ -181,6 +192,15 @@
                     type="text"
                     placeholder="Your phone number:"
                   />
+                </div>
+                <div
+                  class="form__description-agree form__description-agree_mobile"
+                >
+                  <div class="form__checkbox"></div>
+                  <label for="agree">
+                    <input type="checkbox" name="" id="agree" hidden />
+                    I agree to the processing of personal data</label
+                  >
                 </div>
                 <div class="form__description-item">
                   <button type="submit">Submit</button>
@@ -358,20 +378,30 @@
             </div>
           </div>
 
-          <div class="subtitle">
-            <h2 class="subtitle__name subtitle__name_black">design project</h2>
-            <div class="subtitle__icon">
-              <img src="/assets/pencil.svg" alt="" />
+          <div class="gallery-mobile">
+            <div class="gallery-mobile__title">
+              We realize your wildest fantasies
             </div>
-            <div class="subtitle__text">
-              Design project not only helps to make the repair of your apartment
-              more modern, but also significantly reduces the cost of materials
-              and reduces the time of repair work.
+            <div class="slider__images slider__images_mobile">
+              <button class="slider__prev-image"></button>
+              <div><img src="/assets/gallery_1.png" alt="" /></div>
+              <div><img src="/assets/gallery_2.png" alt="" /></div>
+              <button class="slider__next-image"></button>
             </div>
           </div>
         </div>
 
-        
+        <div class="subtitle subtitle_design">
+          <h2 class="subtitle__name subtitle__name_black">design project</h2>
+          <div class="subtitle__icon">
+            <img src="/assets/pencil.svg" alt="" />
+          </div>
+          <div class="subtitle__text">
+            Design project not only helps to make the repair of your apartment
+            more modern, but also significantly reduces the cost of materials
+            and reduces the time of repair work.
+          </div>
+        </div>
 
         <div class="cols cols_topped">
           <div class="cols__item">
@@ -433,7 +463,7 @@
         </div>
 
         <div class="steps">
-          <div>
+          <div class="steps__info">
             <h3>How we are working</h3>
             <div class="steps__main-title">6 steps to the goal</div>
             <div class="steps__chapter">1/6</div>
@@ -549,17 +579,17 @@
               </div>
             </div>
           </div>
-          <div class="subtitle">
+          <div class="subtitle subtitle_mobile-none">
             <div class="subtitle__line"></div>
             <div class="subtitle__text">
               Each employee of our company is a qualified full-time specialist
-              with work experience of 6 years. <br> We do not have laborers and guest
-              workers, each employee carries out work corresponding to his
-              specialty.
+              with work experience of 6 years. <br />
+              We do not have laborers and guest workers, each employee carries
+              out work corresponding to his specialty.
             </div>
           </div>
 
-          <div class="subtitle">
+          <div class="subtitle subtitle_mobile-none">
             <h2 class="subtitle__name subtitle__name_black">
               our clients
             </h2>
@@ -679,7 +709,7 @@
             </div>
             <button>Submit</button>
           </form>
-
+          <div class="map map_mobile"></div>
           <div class="social">
             <div class="social__phone">
               Rostov-on-Don, Nansen St., 239 Shopping Center Decorum Tel +7
