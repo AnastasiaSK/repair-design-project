@@ -24,6 +24,10 @@ body {
   background: #131313;
 }
 
+button {
+  cursor: pointer;
+}
+
 .wrapper {
   max-width: 1440px;
   min-width: 500px;
@@ -31,8 +35,9 @@ body {
   overflow: hidden;
 }
 .black-bg {
-  background: url(/assets/main-bg.png), url(/assets/main-bg-houses1.png),
-    url(/assets/main-bg-houses2.png);
+  background: url(/assets/images/main-bg.png),
+    url(/assets/images/main-bg-houses1.png),
+    url(/assets/images/main-bg-houses2.png);
   background-color: rgba(19, 19, 19, 1);
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-size: cover, 50%, 50%;
@@ -46,7 +51,7 @@ body {
   }
 }
 .white-bg {
-  background: url(/assets/main-bg-white.png) no-repeat;
+  background: url(/assets/images/main-bg-white.png) no-repeat;
   background-size: cover;
   background-position: center;
   background-color: #ffffff;
@@ -119,6 +124,10 @@ body {
 
       color: #ffffff;
       text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
     &-item:first-child a {
@@ -137,6 +146,11 @@ body {
     white-space: nowrap;
     width: 16%;
     text-align: center;
+    cursor: pointer;
+
+    &:hover {
+      color: #fff;
+    }
   }
 
   &__call {
@@ -153,6 +167,10 @@ body {
     color: #ffffff;
     width: 11%;
     padding: 1em;
+
+    &:hover {
+      background-color: #a57426;
+    }
   }
 
   @media (max-width: 1100px) {
@@ -232,7 +250,7 @@ body {
   position: relative;
 
   &__image-block {
-    background: url(/assets/preview_bg.png) no-repeat;
+    background: url(/assets/images/preview_bg.png) no-repeat;
     flex: 1;
     position: relative;
 
@@ -294,9 +312,16 @@ body {
     color: #ffffff;
     display: flex;
     align-items: center;
+    cursor: pointer;
 
     img {
       margin-left: 10px;
+    }
+
+    &:hover {
+      img {
+        animation: ball 0.5s linear alternate infinite;
+      }
     }
   }
 
@@ -331,6 +356,10 @@ body {
     line-height: 15px;
     padding: 20px;
     flex: 1;
+
+    &:hover {
+      box-shadow: 0 0 15px 3px rgba(225, 225, 225, 0.5);
+    }
 
     &_calculate {
       background: #e3b873;
@@ -425,21 +454,30 @@ body {
       width: 10px;
       height: 10px;
       margin: 2px 10px;
+      cursor: pointer;
       &_selected {
         background: #ffffff;
       }
+      &:hover {
+        background: #e3b873;
+      }
     }
     &-arrow {
-      background: url(/assets/arrow-long.svg) no-repeat;
+      background: url(/assets/images/arrow-long.svg) no-repeat;
       background-size: contain;
       background-position: center;
       width: 40px;
       height: 15px;
       margin-left: 30px;
+      cursor: pointer;
       &_prev {
         transform: rotate(180deg);
         margin-right: 30px;
         margin-left: 0;
+      }
+
+      &:hover {
+        opacity: 0.5;
       }
     }
   }
@@ -483,7 +521,7 @@ body {
     position: absolute;
     width: 55px;
     height: 55px;
-    background: #e3b873 url(/assets/arrow-next.svg) no-repeat;
+    background: #e3b873 url(/assets/images/arrow-next.svg) no-repeat;
     background-position: center;
     box-shadow: 0px 0px 15px rgba(227, 184, 115, 0.5);
     border-radius: 50%;
@@ -491,13 +529,17 @@ body {
     right: 3px;
     top: 50%;
     margin-top: 27.5px - 45px;
+
+    &:hover {
+      box-shadow: 0px 0px 15px 3px rgba(255, 255, 255, 0.5);
+    }
   }
 
   &__prev-image {
     position: absolute;
     width: 55px;
     height: 55px;
-    background: #e3b873 url(/assets/arrow-next.svg) no-repeat;
+    background: #e3b873 url(/assets/images/arrow-next.svg) no-repeat;
     background-position: center;
     box-shadow: 0px 0px 15px rgba(227, 184, 115, 0.5);
     border-radius: 50%;
@@ -506,6 +548,10 @@ body {
     top: 50%;
     margin-top: 27.5px - 45px;
     transform: rotate(180deg);
+
+    &:hover {
+      box-shadow: 0px 0px 15px 3px rgba(255, 255, 255, 0.5);
+    }
   }
 
   @media (max-width: 1150px) {
@@ -792,7 +838,7 @@ body {
     display: inline-block;
     width: 18px;
     height: 18px;
-    background: #e3b873 url(/assets/check.svg);
+    background: #e3b873 url(/assets/images/check.svg);
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 1px;
@@ -913,6 +959,10 @@ body {
       text-transform: uppercase;
 
       color: #ffffff;
+
+      &:hover {
+        background: #a57426;
+      }
     }
 
     &_team {
@@ -1036,7 +1086,7 @@ body {
   .circle {
     height: 600px;
     width: 600px;
-    background-image: url(/assets/circle-house.png);
+    background-image: url(/assets/images/circle-house.png);
     background-repeat: no-repeat;
     background-size: contain;
     position: relative;
@@ -1068,7 +1118,14 @@ body {
         text-align: center;
 
         color: #ffffff;
+        cursor: pointer;
         margin-right: 10px;
+
+        transition: color 0.3s;
+
+        &:hover {
+          color: #000;
+        }
       }
 
       &_first {
@@ -1091,7 +1148,7 @@ body {
   }
 
   .request-form {
-    background: url(/assets/question-bg.png) no-repeat;
+    background: url(/assets/images/question-bg.png) no-repeat;
     background-size: cover;
     background-position: center;
     background-color: #131313;
@@ -1124,6 +1181,7 @@ body {
       background: transparent;
       border: none;
       border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      color: #fff;
       &::placeholder {
         font-family: FuturaMediumC;
         font-size: 18px;
@@ -1144,7 +1202,7 @@ body {
       display: inline-block;
       width: 18px;
       height: 18px;
-      background: #e3b873 url(/assets/check.svg);
+      background: #e3b873 url(/assets/images/check.svg);
       background-repeat: no-repeat;
       background-position: center;
       border-radius: 1px;
@@ -1229,7 +1287,7 @@ body {
 }
 
 .gallery {
-  background: url(/assets/gallery_bg.png);
+  background: url(/assets/images/gallery_bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -1255,11 +1313,15 @@ body {
     font-family: Proxima Nova;
     font-size: 20px;
     line-height: 34px;
-
+    cursor: pointer;
     color: #ffffff;
     &:first-child {
       padding-top: 47px;
       color: #e3b873;
+      text-decoration: underline;
+    }
+
+    &:hover {
       text-decoration: underline;
     }
   }
@@ -1429,21 +1491,31 @@ body {
       width: 10px;
       height: 10px;
       margin: 2px 10px;
+      cursor: pointer;
       &_selected {
         background: #ffffff;
       }
+
+      &:hover {
+        background: #e3b873;
+      }
     }
     &-arrow {
-      background: url(/assets/arrow-long.svg) no-repeat;
+      background: url(/assets/images/arrow-long.svg) no-repeat;
       background-size: contain;
       background-position: center;
       width: 40px;
       height: 15px;
       margin-left: 30px;
+      cursor: pointer;
       &_prev {
         transform: rotate(180deg);
         margin-right: 30px;
         margin-left: 0;
+      }
+
+      &:hover {
+        opacity: 0.5;
       }
     }
   }
@@ -1463,12 +1535,16 @@ body {
       font-family: FuturaBookC;
       font-size: 15px;
       line-height: 18px;
-
+      cursor: pointer;
       color: #ffffff;
       opacity: 0.3;
 
       &_selected {
         opacity: 1;
+      }
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.3);
       }
     }
 
@@ -1576,6 +1652,11 @@ body {
     box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5);
     border-right: 1px solid #ffffff;
     flex: 1;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #a57426;
+    }
   }
   &__value-time {
     display: flex;
@@ -1583,6 +1664,11 @@ body {
     background: #e3b873;
     box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5);
     flex: 1;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #a57426;
+    }
   }
   @media (max-width: 700px) {
     & {
@@ -1592,7 +1678,7 @@ body {
 }
 
 .bottom-bg {
-  background: url(/assets/bottom-bg.png) #000;
+  background: url(/assets/images/bottom-bg.png) #000;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1606,7 +1692,7 @@ body {
 }
 
 .question {
-  background: url(/assets/question-bg.png) no-repeat;
+  background: url(/assets/images/question-bg.png) no-repeat;
   background-size: cover;
   background-position: center;
   background-color: #181818;
@@ -1648,6 +1734,7 @@ body {
     background: transparent;
     border: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    color: #fff;
     &::placeholder {
       font-family: FuturaMediumC;
       font-size: 18px;
@@ -1668,7 +1755,7 @@ body {
     display: inline-block;
     width: 18px;
     height: 18px;
-    background: #e3b873 url(/assets/check.svg);
+    background: #e3b873 url(/assets/images/check.svg);
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 1px;
@@ -1745,6 +1832,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    cursor: pointer;
+
+    &:hover {
+      background-color: #a57426;
+    }
   }
   @media (max-width: 1100px) {
     & {
@@ -1756,7 +1849,7 @@ body {
 .map {
   width: 60%;
   padding-top: 30%;
-  background: url(/assets/map.png);
+  background: url(/assets/images/map.png);
   background-size: cover;
   margin: 0 auto;
   &_mobile {
@@ -1779,5 +1872,15 @@ body {
     & {
       display: none;
     }
+  }
+}
+
+@keyframes ball {
+  from {
+    transform: translate(0, -10px);
+  }
+
+  to {
+    transform: translate(0, 10px);
   }
 }
