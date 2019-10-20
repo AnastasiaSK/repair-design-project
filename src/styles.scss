@@ -20,19 +20,6 @@
   src: url(/assets/fonts/futuramediumc.otf) format("opentype");
 }
 
-@media (max-width: 500px) {
-  nav,
-  .preview__instagram,
-  .preview__scroll,
-  .procedure,
-  .steps,
-  .clients,
-  .question,
-  footer {
-    display: none;
-  }
-}
-
 body {
   background: #131313;
 }
@@ -51,17 +38,49 @@ body {
   background-size: cover, 50%, 50%;
   background-position: 4px 25px, left bottom, right bottom;
   padding-bottom: 345px;
+
+  @media (max-width: 700px) {
+    & {
+      background: rgba(19, 19, 19, 1);
+    }
+  }
 }
 .white-bg {
   background: url(/assets/main-bg-white.png) no-repeat;
   background-size: cover;
   background-position: center;
   background-color: #ffffff;
-  padding-bottom: 300px;
+  padding-bottom: 440px;
+
+  &_bottom {
+    padding-bottom: 200px;
+  }
 
   @media (max-width: 900px) {
     & {
       padding-bottom: 360px;
+    }
+    &_bottom {
+      padding-bottom: 200px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    & {
+      background: rgba(19, 19, 19, 1);
+    }
+  }
+}
+
+.white-bg-mobile {
+  background: transparent;
+
+  @media (max-width: 700px) {
+    & {
+      background-color: #fff;
+      padding-top: 80px;
+      padding-bottom: 305px;
+      position: relative;
     }
   }
 }
@@ -159,7 +178,11 @@ body {
     nav {
       display: none;
     }
-    &__contact,
+    &__contact {
+      width: auto;
+      color: #fff;
+      text-decoration: none;
+    }
     &__logo {
       width: auto;
     }
@@ -586,12 +609,7 @@ body {
   }
 
   &_design {
-    margin-top: 260px;
-
-    .subtitle__name,
-    .subtitle__text {
-      color: #fff;
-    }
+    margin-top: -450px;
   }
 
   &__name {
@@ -627,7 +645,6 @@ body {
     width: 55px;
     height: 1px;
     margin: 0 auto;
-    margin-top: 62px;
   }
   &__text {
     margin: 0 auto;
@@ -657,6 +674,14 @@ body {
     &_topped {
       margin-bottom: -220px;
     }
+    &_design {
+      margin-top: 200px;
+
+      .subtitle__name,
+      .subtitle__text {
+        color: #fff;
+      }
+    }
   }
 
   @media (max-width: 700px) {
@@ -666,11 +691,24 @@ body {
     &_mobile-none {
       display: none;
     }
+    &__text_white-mobile {
+      color: #fff;
+      font-family: FuturaBookC;
+      font-size: 14px;
+      line-height: 169.8%;
+      padding-bottom: 0;
+    }
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 700px) {
     &_design {
-      margin-top: 150px;
+      margin-top: -100px;
+    }
+  }
+
+  @media (max-width: 550px) {
+    &_design {
+      margin-top: -200px;
     }
   }
 }
@@ -725,6 +763,9 @@ body {
         border-radius: 2px;
         border: none;
         padding: 20px 70px;
+
+        position: relative;
+        z-index: 2;
       }
     }
     &-item {
@@ -755,6 +796,8 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 1px;
+    vertical-align: middle;
+    margin-top: -3px;
   }
 
   @media (max-width: 1100px) {
@@ -787,6 +830,30 @@ body {
     }
   }
 
+  @media (max-width: 700px) {
+    & {
+      margin-bottom: -30px;
+    }
+    &__description-inputs {
+      input {
+        border-bottom: 1px solid #fff;
+        background: transparent;
+        &::placeholder {
+          line-height: 25px;
+          color: #fff;
+        }
+      }
+      label {
+        color: rgba(255, 255, 255, 0.5);
+      }
+    }
+    &__description-agree {
+      label {
+        color: #fff;
+      }
+    }
+  }
+
   @media (max-width: 550px) {
     &__description-inputs {
       width: 100%;
@@ -800,7 +867,7 @@ body {
   margin-top: 30px;
 
   &_topped {
-    margin-top: -278px;
+    margin-top: 0;
   }
 
   &_over {
@@ -1229,9 +1296,9 @@ body {
 
   &-mobile {
     display: none;
-    padding-top: 100px;
     position: absolute;
     width: 100%;
+    margin-top: 40px;
 
     &__title {
       font-family: Yeseva One;
@@ -1530,6 +1597,12 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   padding-bottom: 65px;
+
+  @media (max-width: 700px) {
+    & {
+      background: rgba(19, 19, 19, 1);
+    }
+  }
 }
 
 .question {
@@ -1619,10 +1692,9 @@ body {
     & {
       width: 100%;
 
-      padding: 0;
+      padding: 35px 0;
       button {
         width: 93%;
-        //margin: 0 30px;
       }
     }
     &__items {
@@ -1630,6 +1702,14 @@ body {
     }
     &__item_checkbox {
       text-align: left;
+    }
+  }
+
+  @media (max-width: 700px) {
+    & {
+      background: rgba(19, 19, 19, 1);
+      top: -250px;
+      margin-bottom: -250px;
     }
   }
 }
